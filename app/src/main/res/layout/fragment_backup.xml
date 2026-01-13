@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:gravity="center"
+     android:padding="32dp"
+     android:orientation="vertical">
+
+    <ImageView
+         android:layout_height="120dp"
+         android:layout_width="120dp"
+         android:layout_marginBottom="32dp"
+         android:src="@drawable/ic_nav_backup"
+         android:alpha="0.5" />
+
+    <com.google.android.material.button.MaterialButton
+         android:layout_height="64dp"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="16dp"
+         android:textSize="16sp"
+         android:id="@+id/btnExport"
+         android:text="导出配置 (复制到剪贴板)" />
+
+    <com.google.android.material.button.MaterialButton
+         android:layout_height="64dp"
+         android:layout_width="match_parent"
+         android:textSize="16sp"
+         style="@style/Widget.Material3.Button.TonalButton"
+         android:id="@+id/btnImport"
+         android:text="导入配置 (从剪贴板粘贴)" />
+
+</LinearLayout>

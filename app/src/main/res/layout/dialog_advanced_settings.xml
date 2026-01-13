@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:padding="24dp"
+         android:orientation="vertical">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="24dp"
+             android:textSize="24sp"
+             android:textColor="?attr/colorOnSurface"
+             android:text="高级设置"
+             android:textStyle="bold" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textColor="?attr/colorPrimary"
+             android:text="服务器地址:" />
+
+        <EditText
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:minHeight="48dp"
+             android:inputType="textUri"
+             android:id="@+id/etSettingsServer" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textColor="?attr/colorPrimary"
+             android:layout_marginTop="12dp"
+             android:text="设备 ID (切换/管理):" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+
+            <FrameLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:background="@drawable/bg_spinner_rounded"
+                 android:paddingHorizontal="4dp"
+                 android:layout_weight="1">
+
+                <Spinner
+                     android:layout_height="48dp"
+                     android:layout_width="match_parent"
+                     android:id="@+id/spDeviceId">
+
+                </Spinner>
+
+            </FrameLayout>
+
+            <ImageView
+                 android:layout_height="40dp"
+                 android:layout_width="40dp"
+                 android:src="@android:drawable/ic_input_add"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 android:padding="8dp"
+                 android:layout_marginStart="8dp"
+                 android:id="@+id/btnAddDevice" />
+
+            <ImageView
+                 android:layout_height="40dp"
+                 android:layout_width="40dp"
+                 android:src="@android:drawable/ic_delete"
+                 android:background="?attr/selectableItemBackgroundBorderless"
+                 android:padding="8dp"
+                 android:layout_marginStart="4dp"
+                 android:id="@+id/btnDelDevice" />
+
+        </LinearLayout>
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="10sp"
+             android:textColor="?attr/colorError"
+             android:layout_marginTop="4dp"
+             android:text="注意：切换设备ID会加载该设备专属的用户列表。" />
+
+        <View
+             android:layout_height="1dp"
+             android:layout_width="match_parent"
+             android:layout_marginVertical="20dp"
+             android:background="?attr/colorOutlineVariant" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textColor="?attr/colorSecondary"
+             android:text="推荐时间区间 (HH:mm):"
+             android:textStyle="bold" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginTop="12dp"
+             android:text="早间:" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:orientation="horizontal">
+
+            <EditText
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:inputType="time"
+                 android:id="@+id/etAmStart" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:paddingHorizontal="8dp"
+                 android:text="-" />
+
+            <EditText
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:inputType="time"
+                 android:id="@+id/etAmEnd" />
+
+        </LinearLayout>
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginTop="8dp"
+             android:text="夏午(5-9月):" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:orientation="horizontal">
+
+            <EditText
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:inputType="time"
+                 android:id="@+id/etSummerStart" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:paddingHorizontal="8dp"
+                 android:text="-" />
+
+            <EditText
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:inputType="time"
+                 android:id="@+id/etSummerEnd" />
+
+        </LinearLayout>
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginTop="8dp"
+             android:text="冬午:" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:orientation="horizontal">
+
+            <EditText
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:inputType="time"
+                 android:id="@+id/etWinterStart" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:paddingHorizontal="8dp"
+                 android:text="-" />
+
+            <EditText
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:inputType="time"
+                 android:id="@+id/etWinterEnd" />
+
+        </LinearLayout>
+
+        <Button
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             style="@style/Widget.Material3.Button.TextButton"
+             android:layout_marginTop="16dp"
+             android:id="@+id/btnResetDefault"
+             android:text="恢复默认配置"
+             android:layout_gravity="end" />
+
+    </LinearLayout>
+
+</ScrollView>

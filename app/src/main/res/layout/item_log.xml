@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:background="?attr/colorSurface"
+     android:paddingVertical="6dp"
+     android:orientation="vertical"
+     android:paddingHorizontal="8dp">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="center_vertical"
+         android:orientation="horizontal"
+         android:id="@+id/layoutSummary">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginEnd="8dp"
+             android:textSize="11sp"
+             android:fontFamily="monospace"
+             android:textColor="?attr/colorOnSurfaceVariant"
+             android:id="@+id/tvTime"
+             android:text="12:00:00" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:textSize="13sp"
+             android:textColor="?attr/colorOnSurface"
+             android:layout_weight="1"
+             android:id="@+id/tvSummary"
+             android:text="摘要信息"
+             android:textStyle="bold" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:textSize="10sp"
+             android:textColor="?attr/colorOnSurfaceVariant"
+             android:id="@+id/tvExpandIcon"
+             android:text="▼" />
+
+    </LinearLayout>
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:visibility="gone"
+         android:padding="8dp"
+         android:textSize="11sp"
+         android:textColor="#2E7D32"
+         android:layout_marginTop="4dp"
+         android:textIsSelectable="true"
+         android:layout_marginBottom="4dp"
+         android:background="?attr/colorSurfaceContainerHigh"
+         android:fontFamily="monospace"
+         android:id="@+id/tvDetail"
+         android:text="{json}" />
+
+    <View
+         android:layout_height="1dp"
+         android:layout_width="match_parent"
+         android:background="?attr/colorOutlineVariant"
+         android:alpha="0.5"
+         android:layout_marginTop="4dp" />
+
+</LinearLayout>
